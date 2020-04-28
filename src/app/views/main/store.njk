@@ -1,0 +1,27 @@
+{% extends "_layouts/product.njk" %} {% block body %}
+<section class="form_container">
+  <h1>Adicione aqui belas fantasias!</h1>
+  <div class="content">
+    <form action="/store" method="post" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Nome da sua fantasia" />
+      <div class="input_group">
+        <input type="text" name="price" placeholder="Valor da fantasia" />
+        <input type="text" name="promotional_price" placeholder="Valor promocional" />
+        <input type="text" name="size" placeholder="Tamanho da fantasia" />
+      </div>
+      <textarea
+        type="text"
+        name="description"
+        placeholder="Adicione uma descrição para sua fantasia"
+      ></textarea>
+      <div class="input_group">
+        <input type="file" class="input_file" name="image" id="image"/>
+        <label for="image">Adicionar imagem</label>
+        <button type="submit" class="button">
+          Adicionar fantasia
+        </button>
+      </div>
+    </form> 
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+<section class="products">
+  {# <p>Se voce comprar te dou um beijo (só se quiser!)</p> #}
+  <div class="cards">
+    {% for fantasy in fantasies %}
+      <div>
+        <img src="/files/{{ fantasy.image }}" alt="Foto Fantasia" />
+        <p>
+          De <span>R$ {{ fantasy.price }},00</span> por <strong>R$ {{ fantasy.promotional_price}},00</strong>
+        </p>
+        <a href="/show/{{ fantasy.id }}" class="button">
+          Mais detalhes
+        </a>
+      </div>
+    {% endfor %} 
+  </div>
+</section>
